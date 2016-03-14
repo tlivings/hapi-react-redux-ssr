@@ -1,0 +1,8 @@
+{
+    "connections": [
+        {
+            "labels": ["web"],
+            "port": 8000
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+  "presets": [
+    "es2015",
+    "react"
+  ],
+  "plugins": [
+    "transform-runtime",
+    "transform-regenerator",
+    "syntax-async-functions",
+    "transform-es2015-for-of",
+    "transform-react-jsx"
+  ]
+}
