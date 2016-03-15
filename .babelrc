@@ -8,6 +8,8 @@
     "transform-regenerator",
     "syntax-async-functions",
     "transform-es2015-for-of",
-    "transform-react-jsx"
+    "transform-react-jsx",
+    "transform-decorators-legacy",
+    "transform-class-properties"
   ]
 }
