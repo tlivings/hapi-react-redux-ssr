@@ -22,6 +22,14 @@ const init = async () => {
         }
     });
 
+    server.route({
+        method: 'GET',
+        path: '/styles.css',
+        handler: (request, reply) => {
+            reply.file(Path.join(__dirname, 'static/styles.css'));
+        }
+    });
+
     Routes.init(server);
 
     await server.start();

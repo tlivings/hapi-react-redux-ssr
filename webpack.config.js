@@ -18,7 +18,7 @@ const config = {
     },
     plugins: [
         new Webpack.NoErrorsPlugin(),
-        new ExtractTextPlugin('[name]__[local]___[hash:base64:5].css', {
+        new ExtractTextPlugin('styles.css', {
           allChunks: true
         })
     ],
@@ -26,9 +26,10 @@ const config = {
     module: {
         loaders: [
             {
-                test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+              test: /\.css$/i,
+              loader: ExtractTextPlugin.extract('style', 'css?modules&localIdentName=[name]_[local]_[hash:base64:5]'),
             }
-        ]
+        ],
     }
 };
 
