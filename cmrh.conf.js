@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = {
-    generateScopedName: '[name]__[local]___[hash:base64:5]'
+    generateScopedName: '[name]_[local]_[hash:base64:5]'
 };
