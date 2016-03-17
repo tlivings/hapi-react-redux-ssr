@@ -1,8 +1,27 @@
 {
-    "connections": [
-        {
-            "labels": ["web"],
+    "connections": {
+        "web": {
             "port": 8000
         }
-    ]
+    },
+    "plugins": {
+        "logging": {
+            "register": "require:good",
+            "options": {
+                "reporters": [{
+                    "reporter": "require:good-console",
+                    "events": {
+                        "log": ["error", "medium"]
+                    }
+                }]
+            },
+            "select": ["web"]
+        },
+        "viewRendering": {
+            "register": "require:vision"
+        },
+        "staticFiles": {
+            "register": "require:inert"
+        }
+    }
 }

@@ -1,7 +1,6 @@
 {
-    "plugins": [
-        {
-            "register": "require:good",
+    "plugins": {
+        "logging": {
             "options": {
                 "reporters": [{
                     "reporter": "require:good-console",
@@ -10,14 +9,7 @@
                         "response": "*"
                     }
                 }]
-            },
-            "select": ["web"]
-        },
-        {
-            "register": "require:vision"
-        },
-        {
-            "register": "require:inert"
+            }
         }
-    ]
+    }
 }
