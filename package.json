@@ -57,7 +57,8 @@
   },
   "scripts": {
     "build": "npm run compile && npm run webpack",
-    "compile": "babel --out-dir dist server.js webpack.config.js lib/server/**/*.js lib/app/**/**/*.js && copyfiles lib/**/*.css dist/ && copyfiles config/*.json dist/",
+    "compile": "babel --out-dir dist server.js webpack.config.js lib/server/**/*.js lib/app/**/**/*.js && npm run copydeps",
+    "copydeps": "copyfiles lib/server/*.ejs dist/ copyfiles lib/**/*.css dist/ && copyfiles config/*.json dist/",
     "cover": "npm run compile && babel-node --plugins transform-es2015-arrow-functions node_modules/.bin/istanbul cover node_modules/.bin/tape -- test/*.js",
     "lint": "eslint server.js lib",
     "start": "node -r css-modules-require-hook/preset dist/server.js",
