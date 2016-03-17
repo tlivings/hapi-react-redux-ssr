@@ -4,7 +4,7 @@ import Path from 'path';
 import Routes from './lib/server_routes';
 import Ejs from 'ejs';
 
-const init = async () => { //eslint-disable-line arrow-parens
+const init = async function () {
 
     const server = await Configure();
 
@@ -36,7 +36,7 @@ const init = async () => { //eslint-disable-line arrow-parens
 
     console.log('Server running at', server.info.uri);
 
-    return Promise.resolve(server);
+    return server;
 };
 
-init().catch((error) => console.log(error.stack));
+init().catch((error) => console.error(error.stack));
