@@ -11,7 +11,7 @@ const init = async function () {
     server.views({
         engines: { ejs: Ejs },
         relativeTo: __dirname,
-        path: '../lib/app/views'
+        path: '../lib'
     });
 
     server.route({
