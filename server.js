@@ -1,7 +1,7 @@
 
 import Configure from 'hapi-configure';
 import Path from 'path';
-import Routes from './lib/server_routes';
+import Routes from './lib/server/routes';
 import Ejs from 'ejs';
 
 const init = async function () {
@@ -11,7 +11,7 @@ const init = async function () {
     server.views({
         engines: { ejs: Ejs },
         relativeTo: __dirname,
-        path: '../lib'
+        path: '../lib/server'
     });
 
     server.route({
