@@ -11,7 +11,14 @@
                 "reporters": [{
                     "reporter": "require:good-console",
                     "events": {
-                        "log": ["error", "medium"]
+                        "$filter": "env",
+                        "production": {
+                            "log": ["error", "medium"]
+                        },
+                        "$default": {
+                            "log": ["info", "debug", "error", "medium"],
+                            "response": "*"
+                        }
                     }
                 }]
             },

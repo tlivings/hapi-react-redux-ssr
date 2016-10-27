@@ -1,12 +1,12 @@
 
-import Configure from 'hapi-configure';
+import Steerage from 'steerage';
 import Path from 'path';
 import Routes from './lib/server/routes';
 import Ejs from 'ejs';
 
 const init = async function () {
 
-    const server = await Configure();
+    const server = await Steerage({ config: Path.resolve('./config.json') });
 
     server.views({
         engines: { ejs: Ejs },

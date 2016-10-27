@@ -14,12 +14,11 @@
   "dependencies": {
     "babel-regenerator-runtime": "^6.3.13",
     "babel-runtime": "^6.3.19",
-    "css-modules-require-hook": "^4.0.0",
+    "css-modules-require-hook": "^4.0.5",
     "ejs": "^2.4.1",
     "good": "^6.6.0",
     "good-console": "^5.3.1",
     "hapi": "^13.2.1",
-    "hapi-configure": "^2.0.0",
     "hapi-webpack-plugin": "^1.3.0",
     "inert": "^3.2.0",
     "react": "^0.14.7",
@@ -28,6 +27,7 @@
     "react-router": "^2.0.1",
     "react-router-redux": "^4.0.0",
     "redux": "^3.3.1",
+    "steerage": "^1.0.0",
     "vision": "^4.0.1"
   },
   "devDependencies": {
@@ -61,7 +61,7 @@
     "copydeps": "copyfiles lib/server/*.ejs dist/ copyfiles lib/**/*.css dist/ && copyfiles config/*.json dist/",
     "cover": "npm run compile && babel-node --plugins transform-es2015-arrow-functions node_modules/.bin/istanbul cover node_modules/.bin/tape -- test/*.js",
     "lint": "eslint server.js lib",
-    "start": "node -r css-modules-require-hook/preset dist/server.js",
+    "start": "node -r ./hooks dist/server.js",
     "test": "npm run compile && npm run testconfigs && babel-node --plugins transform-es2015-arrow-functions node_modules/.bin/tape test/*.js",
     "testconfigs": "node -e 'require(\"./config/config.json\"); require(\"./config/development.json\")'",
     "webpack": "webpack --progress --color -p --config dist/webpack.config.js"
