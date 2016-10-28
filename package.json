@@ -14,6 +14,7 @@
   "dependencies": {
     "babel-regenerator-runtime": "^6.3.13",
     "babel-runtime": "^6.3.19",
+    "bootstrap": "^3.3.7",
     "css-modules-require-hook": "^4.0.5",
     "ejs": "^2.4.1",
     "good": "^6.6.0",
@@ -49,10 +50,12 @@
     "eslint-config-hapi": "^8.0.0",
     "eslint-plugin-hapi": "^4.0.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.10.0",
     "istanbul": "^0.4.1",
     "style-loader": "^0.13.0",
     "tape": "^4.2.2",
+    "url-loader": "^0.5.7",
     "webpack": "^1.12.14"
   },
   "scripts": {

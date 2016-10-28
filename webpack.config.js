@@ -28,6 +28,26 @@ const config = {
             {
               test: /\.css$/i,
               loader: ExtractTextPlugin.extract('style', 'css?modules&localIdentName=[name]_[local]_[hash:base64:5]'),
+            },
+            {
+              test: /\.svg$/,
+              loader: "file-loader"
+            },
+            {
+              test: /\.ttf$/,
+              loader: "file-loader"
+            },
+            {
+              test: /\.png$/,
+              loader: "file-loader"
+            },
+            {
+              test: /\.woff|\.woff2$/,
+              loader: "file-loader"
+            },
+            {
+              test: /\.eot$/,
+              loader: "file-loader"
             }
         ],
     }
